@@ -3,7 +3,7 @@
   text-align: center;
 }
 .App .titleRow {
-  background-color: #3f51b5;
+  background-color: #ff5757;
 }
 .App .titleText {
   color: #ffffff;
@@ -20,5 +20,13 @@
   padding: 2em;
 }
 .App .ant-table-thead tr {
-  background-color: #9fa8da;
+  background-color: #ff5757;
+ 
+}
+.App .ant-table-column-title{
+  color:#ffffff;
+}
+
+.App .ant-input-search-button {
+  background-color: #ff5757;
 }
