@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, CardImg, CardBody,
   CardTitle } from 'reactstrap';
+import CONSTANTS from "../../constants";
 
 class ResultTable extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class ResultTable extends Component {
 
 function RenderPokemonItem ({pokemon}) {
   var imageId = pokemon.url.split("/");
-  var url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+imageId[imageId.length-2]+".png";
+  var url = getUrl(imageId[imageId.length-2]);
   return (
     <Card>
       <CardImg top src={url} alt={pokemon.name} />
@@ -49,5 +50,9 @@ function RenderPokemonItem ({pokemon}) {
       </CardBody>
     </Card>
   );
+}
+
+function getUrl(uriId){
+  return CONSTANTS.POKE_AVATAR_URL_BASE+uriId+".png";
 }
 export default ResultTable;
