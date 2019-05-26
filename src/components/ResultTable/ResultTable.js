@@ -45,7 +45,7 @@ function RenderPokemonItem ({pokemon}) {
     <Card>
       <CardImg top src={url} alt={pokemon.name} />
       <CardBody>
-        <CardTitle>{pokemon.name}</CardTitle>
+        <CardTitle>{pokemon.name.toUpperCase()}</CardTitle>
       </CardBody>
     </Card>
   );
