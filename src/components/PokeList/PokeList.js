@@ -3,11 +3,7 @@ import { Card, CardImg, CardBody,
   CardTitle } from 'reactstrap';
 import CONSTANTS from "../../constants";
 
-class ResultTable extends Component {
-  constructor(props) {
-    super(props);
-    
-  }
+class PokeList extends Component {
 
   render() {
     const pokeList = this.props.searchResults.map((pokemon) => {
@@ -25,17 +21,6 @@ class ResultTable extends Component {
           </div>
       </div>
      );
-
-    // return this.props.isDataLoaded ? (
-    //   <Table
-    //     className="resultsTable"
-    //     columns={this.columns}
-    //     dataSource={this.props.searchResults}
-    //     rowKey={row => row.id}
-    //   />
-    // ) : (
-    //   <Skeleton active />
-    // );
   }
 }
 
@@ -55,4 +40,4 @@ function RenderPokemonItem ({pokemon}) {
 function getUrl(uriId){
   return CONSTANTS.POKE_AVATAR_URL_BASE+uriId+".png";
 }
-export default ResultTable;
+export default PokeList;
