@@ -4,32 +4,30 @@
 }
 .App .titleRow {
   background-color: #ff5757;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
 }
 .App .titleText {
   color: #ffffff;
 }
 .App .searchBar {
   padding-top: 2em;
+  
 }
-.App .resultsTable {
-  margin-top: 2em;
-  background-color: #ffffff;
-  overflow-x: scroll;
+.App .searchContainer{
+    position: fixed;
+    z-index:1;
+    margin-top:65px;
+    background: #eeeeee;
+
 }
-.App .ant-table-pagination {
-  padding: 2em;
-}
-.App .ant-table-thead tr {
-  background-color: #ff5757;
- 
-}
-.App .ant-table-column-title{
-  color:#ffffff;
-}
+
 
 .App .ant-input-search-button {
   background-color: #ff5757;
 }
 .App .marginTop{
-  margin-top:10px;
+  margin-top:130px;
 }

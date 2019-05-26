@@ -51,7 +51,7 @@ class App extends Component {
           </Col>
         </Row>
         <Row>
-          <Col lg={{ span: 8, offset: 8 }} xs={{ span: 22, offset: 1 }}>
+          <Col lg={{ span: 8 ,offset:1}} xs={{ span: 22 }}>
             <SearchBar onSearchHandler={this.onSearchHandler} />
           </Col>
         </Row>
