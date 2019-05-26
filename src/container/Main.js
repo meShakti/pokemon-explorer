@@ -50,7 +50,7 @@ class Main extends Component {
           </Col>
         </Row>
         <Row>
-          <Col lg={{ span: 8 ,offset:1}} xs={{ span: 22 }}>
+          <Col lg={{ span: 8 ,offset:1}} xs={{ span: 22,offset:1 }}>
             <SearchBar onSearchHandler={this.onSearchHandler} />
           </Col>
         </Row>
