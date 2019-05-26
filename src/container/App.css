@@ -1,0 +1,24 @@
+@import "~antd/dist/antd.css";
+.App {
+  text-align: center;
+}
+.App .titleRow {
+  background-color: #3f51b5;
+}
+.App .titleText {
+  color: #ffffff;
+}
+.App .searchBar {
+  padding-top: 2em;
+}
+.App .resultsTable {
+  margin-top: 2em;
+  background-color: #ffffff;
+  overflow-x: scroll;
+}
+.App .ant-table-pagination {
+  padding: 2em;
+}
+.App .ant-table-thead tr {
+  background-color: #9fa8da;
+}
