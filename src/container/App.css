@@ -3,7 +3,7 @@
   text-align: center;
 }
 .App .titleRow {
-  background-color: #ff5757;
+  background-color: #17a2b8!important;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -26,14 +26,14 @@
 
 
 .App .ant-input-search-button {
-  background-color: #ff5757;
+  background-color: #17a2b8!important;
 }
 .App .marginTop{
   margin-top:130px;
 }
 
  .modalHeader{
-  background-color: #ff5757;
+  background-color: #17a2b8!important;
   
 }
 .modalHeader .modal-title{
