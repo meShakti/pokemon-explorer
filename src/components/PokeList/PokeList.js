@@ -4,7 +4,9 @@ import { Card, CardImg, CardBody,
   Media} from 'reactstrap';
 import CONSTANTS from "../../constants";
 import axios from "axios";
-
+/***
+ * Grid File which renders the item of pokeman as cards and also shows the detail result.
+***/
 class PokeList extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +22,7 @@ class PokeList extends Component {
     this.getPokemonDetails = this.getPokemonDetails.bind(this);
     
   }
+  //This method gets the detail of pokemon and convert the data into a format which is easy to render
   getPokemonDetails (pokemon) {
     this.toggleModal();
     axios.get(pokemon.url)
@@ -59,6 +62,7 @@ class PokeList extends Component {
           <div className="row">
               {pokeList}
           </div>
+          {/* Renders Modal for detail view */}
           <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
             <ModalHeader className="modalHeader" toggle={this.toggleModal}>Poke Dex</ModalHeader>
             <ModalBody>
@@ -90,7 +94,7 @@ class PokeList extends Component {
      );
   }
 }
-
+//Renders pokemon item card
 function RenderPokemonItem ({pokemon,onClick}) {
   var imageId = pokemon.url.split("/");
   var url = getUrl(imageId[imageId.length-2]);
@@ -108,6 +112,7 @@ function RenderPokemonItem ({pokemon,onClick}) {
   );
 }
 
+//utility function to construct url
 function getUrl(uriId){
   return CONSTANTS.POKE_AVATAR_URL_BASE+uriId+".png";
 }

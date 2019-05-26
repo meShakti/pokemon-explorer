@@ -6,6 +6,9 @@ import SearchBar from "../components/SearchBar/SearchBar";
 import PokeList from "../components/PokeList/PokeList";
 import CONSTANTS from "../constants";
 
+/***
+ * Search Module for searching the pokemon via pokeapi 
+***/
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +26,7 @@ class Main extends Component {
   };
 
   componentDidMount() {
+    //using axios to  get pokemon list
     axios.get(CONSTANTS.POKE_API).then(res => {
       this.allSearchResults = res.data.results;
       this.setState({
@@ -33,6 +37,7 @@ class Main extends Component {
   }
 
   updateSearchResults = searchTerm => {
+    //handles the search operation 
     this.setState(() => {
       const matchedResults = this.allSearchResults.filter(row => {
         return row.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
