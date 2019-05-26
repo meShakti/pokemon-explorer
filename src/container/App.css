@@ -31,3 +31,11 @@
 .App .marginTop{
   margin-top:130px;
 }
+
+ .modalHeader{
+  background-color: #ff5757;
+  
+}
+.modalHeader .modal-title{
+  color: #ffffff;
+}
